@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-  <meta charset="UTF-8">
   <title>Friend Finder</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- Latest compiled and minified CSS & JS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
@@ -12,8 +13,6 @@
 
   <!-- Font Awesome Glyphicons -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.jquery.min.js"></script>
 
 </head>
 
@@ -65,7 +64,7 @@
       <input type="radio" name="q3" value="5"><label for="5"> 5</label>
 
       <br>
-      <button type="submit" class="btn btn-primary btn-lg btn-block" id="submit"><i class="fa fa-check-circle" aria-hidden="true"></i> Submit</button>
+      <button type="submit" class="btn btn-primary btn-lg btn-block" id="submit" data-toggle="modal" data-target="#match-modal"><i class="fa fa-check-circle" aria-hidden="true"></i> Submit</button>
     </form>
 
     <hr>
@@ -78,13 +77,25 @@
   </div>
 
   <!--Modal-->
-  <div id="match-modal" class="modal">
-    <div class="modal-content">
-      <h4>It's a Match!</h4>
-      <h5 id="match-name"></h5>
-      <img id="match-photo" src="" alt="Match Image" width="250px">
+  <div id="match-modal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">It's a Match!</h4>
+        </div>
+        <div class="modal-body">
+          <h5 id="match-name"></h5>
+          <img id="match-photo" src="" alt="Match Image" width="250px">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" dismiss="modal">Close</button>
+        </div>
+      </div>
+
     </div>
   </div>
+
 </body>
 
 </html>
