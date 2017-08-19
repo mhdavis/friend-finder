@@ -13,10 +13,10 @@ $(document).ready(function () {
       ]
     }
 
-    runQuery(newFriend);
+    runPostRequest(newFriend);
   });
 
-  function runQuery(friend) {
+  function runPostRequest(friend) {
     let currentURL = window.location.origin;
 
     $.ajax({
@@ -27,6 +27,11 @@ $(document).ready(function () {
       $("#match-photo").attr("src", friendMatch.photo);
     });
 
-  }
+    $("#name").val('');
+    $("#photo").val('');
+    for (let i=0; i < 3; i++) {
+      $(`input[name="q${i}"]`).attr('checked', false);
+    }
 
+  }
 });

@@ -1,4 +1,5 @@
 let friendsArray = require('../data/friends.js');
+let determineMatch = require('./determineMatch.js');
 
 module.exports = function(app) {
   app.get("/api/friends", function (req, res) {
@@ -6,9 +7,15 @@ module.exports = function(app) {
   });
 
   app.post("/api/friends", function (req, res) {
-    if (req.body.name && req.body.scores.length === 3) {
-      friendsArray.push(req.body);
-      res.json(friendsArray);
+    let newFriend = req.body;
+
+    if (newFriend.name && newFriend.scores.length === 3) {
+      friendsArray.push(newFriend);
+
+      let matchIndex = determineMatch(newFriend, friendsArray);
+      let matchFriend = friendsArray[matchIndex];
+      res.json(matchFriend);
     }
+
   });
 }
