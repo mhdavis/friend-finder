@@ -1,5 +1,5 @@
 $(document).ready(function () {
-
+  console.log("Document is Ready!");
   $("#submit").on("click", function(event) {
     event.preventDefault();
     console.log("Hello!");
@@ -15,7 +15,7 @@ $(document).ready(function () {
     console.log(newFriend);
     runPostRequest(newFriend);
   });
-}
+});
 
 function runPostRequest(friend) {
   let currentURL = window.location.origin;
