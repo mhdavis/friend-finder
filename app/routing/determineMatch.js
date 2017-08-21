@@ -23,7 +23,8 @@ module.export = function(user) {
   friendsArray.push(user);
 
   return friendsArray[minFriend.friendex];
-}
+
+};
 
 
 function findMinDiffscore (friends) {

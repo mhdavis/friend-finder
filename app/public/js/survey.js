@@ -1,8 +1,6 @@
 $(document).ready(function () {
-  console.log("Document is Ready!");
   $("#submit").on("click", function(event) {
     event.preventDefault();
-    console.log("Hello!");
     let newFriend = {
       name: $("#name").val().trim(),
       photo: $("#photo").val().trim(),
@@ -25,16 +23,19 @@ function runPostRequest(friend) {
       console.log("Match Success");
       $("#match-name").text(data.name);
       $("#match-photo").attr("src", data.photo);
-
-      $("#name").val('');
-      $("#photo").val('');
-      for (let i=0; i < 3; i++) {
-        $(`input[name="q${i}"]`).attr('checked', false);
-      }
+      $(".modal").modal();
     }
+
 
     if (data == false) {
       console.log("Error:" + data);
     }
+
+    $("#name").val('');
+    $("#photo").val('');
+    for (let i=0; i < 3; i++) {
+      $(`input[name="q${i}"]`).attr('checked', false);
+    }
   });
+
 }
