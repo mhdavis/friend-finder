@@ -8,12 +8,10 @@ module.exports = function(app) {
 
   app.post("/api/friends", function (req, res) {
     let newFriend = req.body;
+    console.log(newFriend);
 
     if (newFriend.name && newFriend.scores.length === 3) {
-      friendsArray.push(newFriend);
-
-      let matchIndex = determineMatch(newFriend, friendsArray);
-      let matchFriend = friendsArray[matchIndex];
+      let matchFriend = determineMatch(newFriend);
       res.json(matchFriend);
     }
 

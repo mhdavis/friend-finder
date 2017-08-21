@@ -1,19 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
   <title>Friend Finder</title>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width" initial-scale="1.0">
 
   <!-- Latest compiled and minified CSS & JS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-  <script src="https://code.jquery.com/jquery.js"></script>
+  <script
+    src="https://code.jquery.com/jquery-2.2.4.min.js"
+    integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+    crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 
   <!-- Font Awesome Glyphicons -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
-
 </head>
 
 <body>
@@ -32,12 +34,11 @@
     <hr>
     <h3><strong>Instructions</strong></h3>
     <p>
-      For each question, select a value of between 1 and 5,
-      where <strong>1 = Strong Disagree</strong> and <strong>5 = Strongly Agree!</strong>
+      For each question, select a value of between 1 and 5, where <strong>1 = Strong Disagree</strong> and <strong>5 = Strongly Agree!</strong>
     </p>
     <hr>
 
-    <form id="survey" name="survey">
+    <form id="survey" name="survey" role="form">
       <h3><strong>Question 1</strong></h3>
       <h4>Your mind is always buzzing with unexplored ideas and plans.</h4>
       <input type="radio" name="q1" value="1"><label for="1"> 1</label>
@@ -64,15 +65,15 @@
       <input type="radio" name="q3" value="5"><label for="5"> 5</label>
 
       <br>
-      <button type="submit" class="btn btn-primary btn-lg btn-block" id="submit" data-toggle="modal" data-target="#match-modal"><i class="fa fa-check-circle" aria-hidden="true"></i> Submit</button>
+      <button class="btn btn-primary btn-lg btn-block" id="submit" data-toggle="modal" data-target="#match-modal"><i class="fa fa-check-circle" aria-hidden="true"></i> Submit</button>
     </form>
 
     <hr>
-      <footer class="footer">
-        <div class="container">
-            <p><a href="/api/friends">API Friends List</a> | <a href="https://github.com/afhaque/friendfinder">GitHub Repo</a></p>
-        </div>
-      </footer>
+    <footer class="footer">
+      <div class="container">
+        <p><a href="/api/friends">API Friends List</a> | <a href="https://github.com/afhaque/friendfinder">GitHub Repo</a></p>
+      </div>
+    </footer>
 
   </div>
 
@@ -97,5 +98,8 @@
   </div>
 
 </body>
+
+<!-- Survey.js -->
+<script type="text/javascript" src="/js/survey.js"></script>
 
 </html>
