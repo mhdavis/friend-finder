@@ -1,0 +1,74 @@
+body {
+  font-family: 'Lato', sans-serif;
+  background-color: #5c00a6;
+}
+
+#home-title {
+  font-family: 'Pacifico', cursive;
+  margin-top: 50px;
+}
+
+.custom-title {
+  font-family: 'Pacifico', cursive;
+  color: white;
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+.custom-jumbo {
+  background-color: white;
+}
+
+.custom-survey-container {
+  border-radius: 20px;
+  background-color: white;
+  margin-bottom: 30px;
+}
+
+.custom-btn {
+  font-family: 'Pacifico', cursive;
+  background-color: #5c00a6;
+  color: white;
+  transition: 0.5s;
+}
+.custom-btn:hover {
+  color: #5c00a6;
+  background-color: white;
+  border: 1px solid #5c00a6;
+}
+
+.custom-input-style {
+  border: 1px solid #5c00a6;
+}
+
+strong {
+  color: #5c00a6;
+}
+
+.api-links {
+  color: white;
+}
+
+.api-links > a {
+  color: white;
+}
+
+.survey-api-links-style {
+  color: #5c00a6;
+}
+
+.survey-api-links-style > a {
+  color: #5c00a6;
+}
+
+/*-- MODAL STYLING --*/
+.custom-modal-title {
+  font-family: 'Pacifico', cursive;
+  color: #5c00a6;
+  font-size: 2em;
+}
+
+#match-name {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
